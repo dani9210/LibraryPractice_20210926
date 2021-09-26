@@ -1,11 +1,13 @@
 package com.example.librarypractice_20210926
 
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.gun0912.tedpermission.PermissionListener
+import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -49,6 +51,14 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+//                    pl에 적혀있는 가이드를 들고 => 실제 권한 확인
+
+            TedPermission.create()
+                .setPermissionListener(pl)
+                .setPermissions(Manifest.permission.CALL_PHONE)
+                .check()
+
+
 
 
 
@@ -57,6 +67,8 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+
 
 
 
