@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,7 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        callBtn.setOnClickListener {
+
+
+        val imageURL = "https://newsimg.hankookilbo.com/cms/articlerelease/2020/01/29/202001291565712283_1.jpg"
+
+
+//        인터넷주소에 있는 이미지를-> actionImg에 보여주기 (Glide) ->인터넷다운 (데이터요금 사용) -> 권한필요
+
+        Glide.with(this).load(imageURL).into(actionImg)
+
+
+         callBtn.setOnClickListener {
 
 
 //            권한 획득 여부에 따른 행동 방안 정리.
