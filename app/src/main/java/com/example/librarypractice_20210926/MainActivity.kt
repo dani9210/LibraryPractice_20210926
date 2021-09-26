@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val imageURL = "https://newsimg.hankookilbo.com/cms/articlerelease/2020/01/29/202001291565712283_1.jpg"
+        val imageURL = "http://newsimg.hankookilbo.com/cms/articlerelease/2020/01/29/202001291565712283_1.jpg"
 
 
 //        인터넷주소에 있는 이미지를-> actionImg에 보여주기 (Glide) ->인터넷다운 (데이터요금 사용) -> 권한필요
