@@ -5,8 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
 
 
     tools:context=".ViewPhotoActivity">
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/soyeon_pic1"/>
+
 
 </LinearLayout>
